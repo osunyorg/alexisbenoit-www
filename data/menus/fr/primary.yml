@@ -1,4 +1,52 @@
 ---
 title: Menu principal
-items: []
+items:
+- title: Actualités
+  target: "/actualites/"
+  kind: page
+  children: []
+- title: Équipe
+  target: "/equipe/"
+  kind: page
+  children:
+  - title: Équipe éditoriale
+    target: "/equipe/equipe-editoriale/"
+    kind: page
+    children: []
+- title: Organisations
+  target: "/organisations/"
+  kind: page
+  children: []
+- title: Musique
+  target: "/musique/"
+  kind: page
+  children:
+  - title: Répétitions
+    target: "/musique/repetitions/"
+    kind: page
+    children:
+    - title: 17 janvier 2023
+      target: "/musique/repetitions/17-janvier-2023/"
+      kind: page
+      children: []
+    - title: 24 janvier 2023
+      target: "/musique/repetitions/24-janvier-2023/"
+      kind: page
+      children: []
+    - title: 7 février 2023
+      target: "/musique/repetitions/7-fevrier-2023/"
+      kind: page
+      children: []
+    - title: 23 mai 2023
+      target: "/musique/repetitions/23-mai-2023/"
+      kind: page
+      children: []
+    - title: 20 juin 2023
+      target: "/musique/repetitions/20-juin-2023/"
+      kind: page
+      children: []
+  - title: Records
+    target: "/musique/records/"
+    kind: page
+    children: []
 
