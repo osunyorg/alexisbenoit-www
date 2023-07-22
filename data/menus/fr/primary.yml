@@ -52,5 +52,9 @@ items:
 - title: Dreams
   target: "/dreams/"
   kind: page
-  children: []
+  children:
+  - title: Mc Do Birthday
+    target: "/dreams/mc-do-birthday/"
+    kind: page
+    children: []
 
