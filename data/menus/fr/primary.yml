@@ -49,4 +49,8 @@ items:
     target: "/musique/records/"
     kind: page
     children: []
+- title: Dreams
+  target: "/dreams/"
+  kind: page
+  children: []
 
