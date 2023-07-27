@@ -45,16 +45,16 @@ items:
       target: "/musique/repetitions/20-juin-2023/"
       kind: page
       children: []
-    - title: 25 juillet 2023
-      target: "/musique/repetitions/25-juillet-2023/"
+    - title: 04 juillet 2023
+      target: "/musique/repetitions/04-juillet-2023/"
       kind: page
       children: []
     - title: 18 juillet 2023
       target: "/musique/repetitions/18-juillet-2023/"
       kind: page
       children: []
-    - title: 04 juillet 2023
-      target: "/musique/repetitions/04-juillet-2023/"
+    - title: 25 juillet 2023
+      target: "/musique/repetitions/25-juillet-2023/"
       kind: page
       children: []
   - title: Records
