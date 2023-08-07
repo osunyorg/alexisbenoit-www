@@ -61,6 +61,10 @@ items:
       target: "/musique/repetitions/27-juin-2023/"
       kind: page
       children: []
+    - title: 01 août 2023
+      target: "/musique/repetitions/01-aout-2023/"
+      kind: page
+      children: []
   - title: Records
     target: "/musique/records/"
     kind: page
