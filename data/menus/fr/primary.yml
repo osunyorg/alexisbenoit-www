@@ -77,4 +77,8 @@ items:
     target: "/dreams/mc-do-birthday/"
     kind: page
     children: []
+- title: Photos
+  target: "/photos/"
+  kind: page
+  children: []
 
