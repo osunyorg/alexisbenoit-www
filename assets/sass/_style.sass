@@ -16,3 +16,18 @@
         margin-top: 0
   audio
     display: block
+
+.block-gallery
+  &--grid
+    .gallery
+        align-items: start
+        @include in-page-without-sidebar
+            @include grid(2, desktop)
+
+.hero
+  border-bottom: 1px dashed #000
+
+
+.logo
+  font-size: px2rem(50)
+  transform: rotate(90deg) scaleX(-1)
