@@ -1,7 +1,8 @@
 ---
-title: >
-  Site perso d'Alex
+title: "Site perso d'Alex"
 breadcrumb_title: "Site perso d'Alex"
+breadcrumbs:
+  - title: "Site perso d'Alex"
 url: "/"
 aliases:
   - /translation missing: fr.communication.website.pages.defaults.home.slug/
@@ -20,12 +21,12 @@ translation_key: communication-website-page-e4a79bda-610b-46b8-8925-23cde96733e2
 bodyclass: 
 
 children:
-  - /actualites/
-  - /equipe/
-  - /organisations/
-  - /musique/
-  - /dreams/
-  - /photos/
+  - "content/fr/posts/_index.html"
+  - "content/fr/persons/_index.html"
+  - "content/fr/organizations/_index.html"
+  - "content/fr/pages/musique/_index.html"
+  - "content/fr/pages/dreams/_index.html"
+  - "content/fr/pages/photos/_index.html"
 meta_description: >
   
 description: >
@@ -54,29 +55,14 @@ contents:
       show_images: false
       layout: grid
       pages:
-        - page: "/photos/"
-          slug: "/photos/"
-        - page: "/musique/repetitions/"
-          slug: "/musique/repetitions/"
-      elements:
-        - title: >-
-            Photos
-          summary: >-
-            Quelques photos prises au Canon FTB
+        - path: "/photos/"
           slug: "photos"
-          path: "/photos/"
-          url: "/photos/"
-          bodyclass: >-
-            
-        - title: >-
-            Répétitions
-          summary: >-
-            
+          file: "content/fr/pages/photos/_index.html"
+          external: false
+        - path: "/musique/repetitions/"
           slug: "repetitions"
-          path: "/musique/repetitions/"
-          url: "/musique/repetitions/"
-          bodyclass: >-
-            
+          file: "content/fr/pages/musique/repetitions/_index.html"
+          external: false
 
 
 
