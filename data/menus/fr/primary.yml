@@ -8,11 +8,7 @@ items:
   - title: Répétitions
     target: "/musique/repetitions/"
     kind: page
-    children:
-    - title: 01 août 2023
-      target: "/musique/repetitions/01-aout-2023/"
-      kind: page
-      children: []
+    children: []
   - title: Records
     target: "/musique/records/"
     kind: page
