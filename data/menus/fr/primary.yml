@@ -9,10 +9,6 @@ items:
     target: "/musique/repetitions/"
     kind: page
     children:
-    - title: 17 janvier 2023
-      target: "/musique/repetitions/17-janvier-2023/"
-      kind: page
-      children: []
     - title: 24 janvier 2023
       target: "/musique/repetitions/24-janvier-2023/"
       kind: page
