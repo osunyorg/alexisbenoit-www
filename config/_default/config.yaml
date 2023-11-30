@@ -2,3 +2,9 @@ theme: osuny-hugo-theme-aaa
 paginate: 18
 enableRobotsTXT: true
 removePathAccents: true
+params:
+  image_sizes:
+    blocks:
+      gallery:
+        grid:
+          desktop: 900

@@ -52,3 +52,23 @@
   font-family: $heading-font-family
   font-weight: bold
   margin-bottom: $spacing2
+
+@mixin add-typography-size($name, $type)
+    @each $breakpoint, $settings in $type
+      @include media-breakpoint-up($breakpoint)
+          @each $property, $value in $settings
+              --#{$name}-#{$property}: #{$value}
+
+@mixin typography($name)
+  font-size: var(--#{$name}-font-size)
+  line-height: var(--#{$name}-line-height)
+
+\:root
+  @include add-typography-size(trafalgar, ('xs': ('font-size': 22px, 'line-height': 30px), 'md': ('font-size': 50px, 'line-height': 45px), 'lg': ('font-size': 70px, 'line-height': 55px)))
+  @include add-typography-size(pica, ('xs': ('font-size': 22px, 'line-height': 30px), 'md': ('font-size': 50px, 'line-height': 45px), 'lg': ('font-size': 70px, 'line-height': 55px)))
+
+h1
+  @include typography(trafalgar)
+
+.block-pages .grid article h3
+  @include typography(pica)
