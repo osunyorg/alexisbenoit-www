@@ -3,7 +3,7 @@
     display: block !important
     li
       display: block
-      margin-bottom: $spacing2
+      margin-bottom: $spacing-4
       &::before
         display: none
       a
@@ -11,7 +11,7 @@
           display: none
       figure
         display: flex
-        gap: $spacing0
+        gap: $spacing-2
       figcaption
         margin-top: 0
   audio
@@ -51,7 +51,7 @@
   color: $color-background
   font-family: $heading-font-family
   font-weight: bold
-  margin-bottom: $spacing2
+  margin-bottom: $spacing-4
 
 @mixin add-typography-size($name, $type)
     @each $breakpoint, $settings in $type
