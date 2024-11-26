@@ -9,12 +9,16 @@ items:
     target: "/musique/repetitions/"
     kind: page
     children: []
+    file: content/fr/pages/musique/repetitions/_index.html
   - title: Records
     target: "/musique/records/"
     kind: page
     children: []
+    file: content/fr/pages/musique/records/_index.html
+  file: content/fr/pages/musique/_index.html
 - title: Photos
   target: "/photos/"
   kind: page
   children: []
+  file: content/fr/pages/photos/_index.html
 
