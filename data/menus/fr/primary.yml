@@ -4,16 +4,19 @@ items:
 - title: Musique
   target: "/musique/"
   kind: page
+  new_tab: false
   children:
   - title: Répétitions
     target: "/musique/repetitions/"
     kind: page
+    new_tab: false
     children: []
     path: "/pages/musique/repetitions"
     file: content/fr/pages/musique/repetitions/_index.html
   - title: Records
     target: "/musique/records/"
     kind: page
+    new_tab: false
     children: []
     path: "/pages/musique/records"
     file: content/fr/pages/musique/records/_index.html
@@ -22,6 +25,7 @@ items:
 - title: Photos
   target: "/photos/"
   kind: page
+  new_tab: false
   children: []
   path: "/pages/photos"
   file: content/fr/pages/photos/_index.html
