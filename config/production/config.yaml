@@ -2,6 +2,11 @@
 
 baseURL: https://perso.alex.digital
 
+## OSUNY
+osuny:
+  website:
+    id: 3f58616b-0aa3-4cb1-a135-b2952b52e2b9
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
