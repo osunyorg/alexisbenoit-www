@@ -2,31 +2,41 @@
 title: Menu principal
 items:
 - title: Musique
+  slug: musique
   target: "/musique/"
   kind: page
   new_tab: false
   children:
   - title: Répétitions
+    slug: repetitions
     target: "/musique/repetitions/"
     kind: page
     new_tab: false
     children: []
+    descendants_targets: []
     path: "/pages/musique/repetitions"
     file: content/fr/pages/musique/repetitions/_index.html
   - title: Records
+    slug: records
     target: "/musique/records/"
     kind: page
     new_tab: false
     children: []
+    descendants_targets: []
     path: "/pages/musique/records"
     file: content/fr/pages/musique/records/_index.html
+  descendants_targets:
+  - "/musique/records/"
+  - "/musique/repetitions/"
   path: "/pages/musique"
   file: content/fr/pages/musique/_index.html
 - title: Photos
+  slug: photos
   target: "/photos/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/photos"
   file: content/fr/pages/photos/_index.html
 
