@@ -1,57 +1,32 @@
-{{- $template := .block.template -}}
-{{- $position := .block.position -}}
-{{- $title := .block.title -}}
+{{- $block := .block -}}
+{{- $block_class := partial "blocks/helpers/GetClass" .block -}}
+
 {{- with .block.data -}}
-  <section class="block block-files{{ if $title }} block-with-title{{ end }}" id="block-{{ $position }}">
+  <div class="{{ $block_class }}">
     <div class="container">
       <div class="block-content">
-        {{- if or $title .description }}
-          <div class="top">
-            {{- if not $title -}}
-              {{ partial "blocks/default_title.html" $template }}
-            {{ else }}
-              <h2>{{ safeHTML $title }}</h2>
-            {{ end -}}
-            {{- if .description }}
-              <div class="description">
-                {{ safeHTML  .description }}
-              </div>
-            {{ end -}}
-          </div>
-        {{ end -}}
-        
+        {{ partial "blocks/top.html" $block.top }}
         <ul class="files">
           {{- range .files }}
             {{ if ne .id "" }}
-              {{- $file := partial "GetMedia" .id -}}
-              {{ if $file }}
-                <li>
-                  {{- $title := .title -}}
-                  {{- if (not $title) }}
-                    {{ $title = $file.name }}
-                  {{ end -}}
-                  {{- $size := partial "GetHumanSize" $file.size -}}
-                  {{- $extension := partial "GetExtensionFile" $file.name -}}
-                  {{- $extension_with_size := (printf "%.2f %s - %s" $size.weight $size.unit $extension) -}}
-                  {{- $title_with_size := printf "%s (%s)" $title $extension_with_size -}}
-                  {{- $url := $file.url -}}
-                  {{- if site.Params.keycdn -}}
-                    {{- $url = $file.direct_url -}}
-                  {{- end -}}
-                  {{ if $file }}
-                    <p>{{ $title }}</p>
-                    {{ if eq $extension "MP3" }}
-                      <audio src="{{ $url }}" controls="true"></audio>
-                    {{ end }}
-                    <figure>
-                      <a href="{{ $url }}" download="{{ safeHTML $file.name }}" target="_blank" title="{{ i18n "commons.link.blank_aria" (dict "Title" $title_with_size) }}">
-                        download
-                      </a>
-                      <figcaption>
-                        <abbr title="{{ i18n (printf "commons.extensions.%s" $extension) }}">{{ $extension }}</abbr>
-                        - {{ $size.weight }} <abbr title="{{ $size.full_unit }}">{{ $size.unit }}</abbr>
-                      </figcaption>
-                    </figure>
+              {{ if partial "GetMedia" .id }}
+                <li {{- if .image }} class="with-image" {{- end }}>
+                  {{ $extension := partial "commons/files/helpers/GetExtensionFile" .name }}
+                  {{ if eq $extension "MP3" }}
+                    <audio src="{{ .url }}" controls="true"></audio>
+                  {{ end }}
+                  <figure>
+                    {{ partial "commons/files/download-link.html" (dict
+                      "id" .id
+                      "title" .title
+                      "with_caption" true
+                    ) }}
+                  </figure>
+                  {{ with .image }}
+                    {{ partial "commons/image.html" (dict
+                      "image" .
+                      "sizes" site.Params.image_sizes.blocks.call_to_action
+                    ) }}
                   {{ end }}
                 </li>
               {{ end -}}
@@ -60,5 +35,5 @@
         </ul>
       </div>
     </div>
-  </section>
+  </div>
 {{- end -}}
