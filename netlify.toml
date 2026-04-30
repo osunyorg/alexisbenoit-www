@@ -4,7 +4,6 @@
 
 [build.environment]
   HUGO_VERSION = "0.159.2"
-  NODE_VERSION = "22"
 
 [[headers]]
   for = "/*"
@@ -12,3 +11,20 @@
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+  from = "/musique/repetitions/mardi-23-mai/"
+  to = "/musique/repetitions/17-janvier-2023/"
+
+[[redirects]]
+  from = "/records/"
+  to = "/musique/records/"
+
+[[redirects]]
+  from = "/11-octobre-2023/"
+  to = "/musique/repetitions/11-octobre-2023/"
+
+[[redirects]]
+  from = "/23-mai-2023/"
+  to = "/musique/repetitions/23-mai-2023/"
+
